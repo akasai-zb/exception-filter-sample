@@ -3,16 +3,16 @@ import { Injectable } from '@nestjs/common'
 @Injectable()
 export class AppService {
   getHello(): string {
-    // this.expectableError()
-    // this.unexpectableError()
+    // this.predictableError()
+    // this.unpredictableError()
     return 'Hello World!'
   }
 
-  private expectableError() {
+  private predictableError() {
     throw 2000
   }
 
-  private unexpectableError(arr?: number[]) {
+  private unpredictableError(arr?: number[]) {
     return arr.join()
   }
 }
